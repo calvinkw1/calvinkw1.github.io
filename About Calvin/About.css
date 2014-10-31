@@ -1,13 +1,24 @@
+body {
+	background-image: url("https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/s720x720/1902892_10152779791995309_1929142961065312454_n.jpg?oh=6724c66bdf26072fec1f950ccb1f096c&oe=54B8425B&__gda__=1425558480_484a56539afa6cc80c00bef3ce1a5398");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Rancho', cursive;
+}
 h1 {
-	color: blue;
-	font-size: 50px;
+	font-family: 'Monofett', cursive;
+	color: green;
+	font-size: 40px;
 }
 h2 {
+	font-family: 'Rancho', cursive;
 	color: red;
 	font-size: 20px;
+	margin-top: -30px;
 }
 .exp {
-	color: green;
+	color: #1CA8C3;
 }
 .balance img {
 	float: right;
@@ -15,16 +26,18 @@ h2 {
 	width: 30%;
 }
 .balancecap {
+	color: white;
     float: right;
     clear: right;
-    margin-right: 140px;
 }
 .snowjump img {
 	float: left;
 	height: auto;
 	width: 30%;
+	margin-top: 100px;
 }	
 .snowjumpcap {
+	color: white;
 	float: left;
 	clear: left;
 }
@@ -33,5 +46,9 @@ h2 {
   	position: absolute;
   	top: 0; left: 0; bottom: 0; right: 0;
   	height: auto;
-	width: 20%;
+	width: 15%;
+}
+.imgCarousel {
+	position: relative;
+	float: right;
 }
