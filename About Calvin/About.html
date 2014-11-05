@@ -37,39 +37,56 @@
 	<img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10398872_80600560308_4606131_n.jpg?oh=f22f1cab63a7d89f5bebce41d047d7bb&oe=54F23FC7&__gda__=1424303598_9a3b3eb4a57ed6e9f62fb01fcae44ca7">
 </div>
 <div class="snowjumpcap">The landing didn't go so well</div>
-<div class="imageCarousel">
-	<img id="one">
-	<img id="two">
-	<img id="three">
-</div>
+<div id="imageCarousel">
+<img src="https://scontent-a-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1915082_142787605308_7567205_n.jpg?oh=914d887c834c41f22b7aad886bf8cb90&oe=54F2F775" id="mainImg">
+
+</div> 
+
+<div id="imglist">
+<a href="javascript:nextImage('mainImg')">Next Image</a>
+<a href="javascript:prevImage('mainImg')">Previous Image</a>
+
 
 </body>
 
 <script>
-	var images = ["https://scontent-a-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1915082_142787605308_7567205_n.jpg?oh=914d887c834c41f22b7aad886bf8cb90&oe=54F2F775", "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/400034_10151408021405309_86665200_n.jpg?oh=84a4d257592f588a2f1c3fa01d3983c0&oe=54AFE7AF&__gda__=1424462462_9784cd3ae0cefc27a59a1dcdd2844626", "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10525358_10152541828045309_3354253725574010397_n.jpg?oh=681df27ca5ccf04cb237515c1ffcddec&oe=54F2E27A"];
+	var imgArray = new Array();
+
+	imgArray[0] = new Image();
+	imgArray[0].src = "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1915082_142787605308_7567205_n.jpg?oh=914d887c834c41f22b7aad886bf8cb90&oe=54F2F775";
+
+	imgArray[1] = new Image();
+	imgArray[1].src = "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/400034_10151408021405309_86665200_n.jpg?oh=84a4d257592f588a2f1c3fa01d3983c0&oe=54AFE7AF&__gda__=1424462462_9784cd3ae0cefc27a59a1dcdd2844626";
+
+	imgArray[2] = new Image();
+	imgArray[2].src = "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10525358_10152541828045309_3354253725574010397_n.jpg?oh=681df27ca5ccf04cb237515c1ffcddec&oe=54F2E27A";
 
 	function nextImage(element) {
-		var img = document.getElementById(element);
-		for(var i = 0; i < images.length; i++) {
-			if(images[i].src == img.src) {
-				if(i === images.length) {
-					document.getElementById(element).src = images[0].src;
+	    var img = document.getElementById(element);
+	    for(var i = 0; i < imgArray.length;i++) {
+	        if(imgArray[i].src == img.src) {
+	            if(i === imgArray.length) {
+	                document.getElementById(element).src = imgArray[0].src;
+	                break;
+	            }
+	            document.getElementById(element).src = imgArray[i+1].src;
+	            break;
+	        }
+	    }
+	}
+
+	function prevImage(element) {
+		var img = document.getElementByID(element);
+		for(var i = 0; i > imgArray.length;i++) {
+			if(imgArray[i].src == img.src) {
+				if(i === imgArray.length) {
+					document.getElementByID(element).src = imgArray[0].src;
+					break;
 				}
+				document.getElementByID(element).src = imgArray[i-1].src;
 			}
 		}
 	}
-
-
-
-/*	var imageNum = 0;
-
-	var nextImage = function() {
-		if (imageNum != 0) {
-
-
-		}
-	}
-*/
 </script>
 
 </html>
