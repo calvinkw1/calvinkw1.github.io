@@ -9,16 +9,26 @@ body {
 h1 {
 	font-family: 'Monofett', cursive;
 	color: green;
-	font-size: 40px;
+	font-size: 50px;
 }
 h2 {
 	font-family: 'Rancho', cursive;
 	color: red;
-	font-size: 20px;
+	font-size: 30px;
 	margin-top: -30px;
 }
+h3 {
+	color: white;
+}
+p {
+	color: #FFFF00;
+	font-size: 20px;
+}
 .exp {
-	color: #1CA8C3;
+	color: #FFFF00;
+}
+.contact {
+	color: #FFFF00;
 }
 .balance img {
 	float: right;
@@ -41,14 +51,15 @@ h2 {
 	float: left;
 	clear: left;
 }
-.married img {
+.imageCarousel img {
   	margin: auto;
   	position: absolute;
   	top: 0; left: 0; bottom: 0; right: 0;
   	height: auto;
 	width: 15%;
 }
-.imgCarousel {
-	position: relative;
-	float: right;
+.imageNav {
+	position: absolute;
+	margin-left: 600px;
+	margin-top: 445px;
 }
