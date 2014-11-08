@@ -21,7 +21,7 @@
 <h1>Get to know Calvin</h1>
 <h2>Tall Asian, unrelated to Yao Ming, but that would've be nice.</h2>
 <h3>About Me</h3>
-<p>I'm 6'4" and Asian. I love Basketball, as well as other sports. I'm currently a Producer</br>at an online gaming company and looking to transition into being a web developer.</p>
+<p>I'm 6'4" and Asian. I love Basketball, as well as other sports. I'm currently a Producer</br>at an online gaming company and looking to transition into being a web developer.</br>Let's hope I don't fail miserably.</p>
 <h3>Experience</h3>
 <ul class="exp">
 	<li>Product Manager</li>
@@ -64,7 +64,7 @@
 	    var img = document.getElementById(element);
 	    for(var i = 0; i < imgArray.length;i++) {
 	        if(imgArray[i].src == img.src) {
-	            if(i === imgArray.length) {
+	            if(i === imgArray.length-1) {
 	                document.getElementById(element).src = imgArray[0].src;
 	                break;
 	            }
