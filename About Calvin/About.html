@@ -21,10 +21,10 @@
 <h1>Get to know Calvin</h1>
 <h2>Tall Asian, unrelated to Yao Ming, but that would've be nice.</h2>
 <h3>About Me</h3>
-<p>I'm 6'4" and Asian. I love Basketball, as well as other sports. I'm currently a Producer</br>at an online gaming company and looking to transition into being a web developer.</br>Let's hope I don't fail miserably.</p>
+<p>I'm 6'4" and Asian. I love Basketball, as well as other sports. I'm currently a Producer</br>at an online gaming company and looking to transition into being a web developer.</p>
 <h3>Experience</h3>
 <ul class="exp">
-	<li>Product Manager</li>
+	<li>Producer</li>
 	<li>Crisis Manager</li>
 	<li>Operations Supervisor</li>
 	<li>Customer Support Manager</li>
@@ -46,34 +46,56 @@
 </body>
 
 <script>
-	var imgArray = new Array();
-
+	var imgArray = new Array(); //object array
 	imgArray[0] = new Image();
 	imgArray[0].src = "https://scontent-b-sjc.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10614370_10152779797150309_5300639295927322_n.jpg?oh=7fe948b89a3bac21cff70f3b678dc2cf&oe=54EE0878";
-
 	imgArray[1] = new Image();
 	imgArray[1].src = "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1915082_142787605308_7567205_n.jpg?oh=914d887c834c41f22b7aad886bf8cb90&oe=54F2F775";
-
 	imgArray[2] = new Image();
 	imgArray[2].src = "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/400034_10151408021405309_86665200_n.jpg?oh=84a4d257592f588a2f1c3fa01d3983c0&oe=54AFE7AF&__gda__=1424462462_9784cd3ae0cefc27a59a1dcdd2844626";
-
 	imgArray[3] = new Image();
 	imgArray[3].src = "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10525358_10152541828045309_3354253725574010397_n.jpg?oh=681df27ca5ccf04cb237515c1ffcddec&oe=54F2E27A";
 
-	function nextImage(element) {
+/*
+	var imgArray = [];
+	var imgSrc = ["https://scontent-b-sjc.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10614370_10152779797150309_5300639295927322_n.jpg?oh=7fe948b89a3bac21cff70f3b678dc2cf&oe=54EE0878",
+				  "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/400034_10151408021405309_86665200_n.jpg?oh=84a4d257592f588a2f1c3fa01d3983c0&oe=54AFE7AF&__gda__=1424462462_9784cd3ae0cefc27a59a1dcdd2844626"];
+
+	for (var i = 0; i < imgSrc.length; i++) {
+		imgArray[i] = new Image();
+		imgArray[i].src	= imgSrc[i];	
+	}
+
+	var imgArray = [new Image(), new Image()];
+
+	imgArray[0].src = "https://scontent-b-sjc.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10614370_10152779797150309_5300639295927322_n.jpg?oh=7fe948b89a3bac21cff70f3b678dc2cf&oe=54EE0878";
+	imgArray[1].src = "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/400034_10151408021405309_86665200_n.jpg?oh=84a4d257592f588a2f1c3fa01d3983c0&oe=54AFE7AF&__gda__=1424462462_9784cd3ae0cefc27a59a1dcdd2844626";
+
+
+	new Array(); 
+	imgArray[0] = new Image();
+	imgArray[0].src = "https://scontent-b-sjc.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10614370_10152779797150309_5300639295927322_n.jpg?oh=7fe948b89a3bac21cff70f3b678dc2cf&oe=54EE0878";
+	imgArray[1] = new Image();
+	imgArray[1].src = "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1915082_142787605308_7567205_n.jpg?oh=914d887c834c41f22b7aad886bf8cb90&oe=54F2F775";
+	imgArray[2] = new Image();
+	imgArray[2].src = "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/400034_10151408021405309_86665200_n.jpg?oh=84a4d257592f588a2f1c3fa01d3983c0&oe=54AFE7AF&__gda__=1424462462_9784cd3ae0cefc27a59a1dcdd2844626";
+	imgArray[3] = new Image();
+	imgArray[3].src = "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10525358_10152541828045309_3354253725574010397_n.jpg?oh=681df27ca5ccf04cb237515c1ffcddec&oe=54F2E27A";
+*/
+
+	function nextImage(element) {  //this is the function for the nextImage button
 	    var img = document.getElementById(element);
-	    for(var i = 0; i < imgArray.length;i++) {
-	        if(imgArray[i].src == img.src) {
-	            if(i === imgArray.length-1) {
-	                document.getElementById(element).src = imgArray[0].src;
-	                break;
+	    for(var i = 0; i < imgArray.length;i++) {  //set var i to 0, if var is less than the length of the array, add 1 to the var
+	        if(imgArray[i].src == img.src) {  //if current src of imgArray variable is equal to current image src, do
+	            if(i === imgArray.length-1) {  //check first to see if var i is equal to the length of the array, if so do
+	                document.getElementById(element).src = imgArray[0].src; //set imgArray back to first image
+	                break; //breaks out of the function
 	            }
-	            document.getElementById(element).src = imgArray[i+1].src;
-	            break;
+	            document.getElementById(element).src = imgArray[i+1].src; //set current image src to next image src in the array
+	            break;  //breaks out of the function
 	        }
 	    }
 	}
-
 </script>
 
 </html>
