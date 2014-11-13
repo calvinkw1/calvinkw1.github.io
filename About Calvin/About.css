@@ -13,22 +13,22 @@ h1 {
 }
 h2 {
 	font-family: 'Rancho', cursive;
-	color: red;
+	color: green;
 	font-size: 30px;
 	margin-top: -30px;
 }
 h3 {
-	color: white;
+	color: black;
 }
 p {
-	color: #FFFF00;
+	color: #333333;
 	font-size: 20px;
 }
 .exp {
-	color: #FFFF00;
+	color: #40C000;
 }
 .contact {
-	color: #FFFF00;
+	color: #40C000;
 }
 .balance img {
 	float: right;
@@ -44,7 +44,7 @@ p {
 	float: left;
 	height: auto;
 	width: 30%;
-	margin-top: 100px;
+	margin-top: 250px;
 }	
 .snowjumpcap {
 	color: white;
